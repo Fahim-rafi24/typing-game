@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- google font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- local css -->
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="shortcut icon" href="img/fave_icon.png" type="image/x-icon">
+
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- daisy UI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- title section -->
+    <title>ALPHABET CLASH</title>
+</head>
+
+<body class=" bg-[#010313] min-h-screen text-white text-center">
+
+    <!-- main section -->
+    <section id="bg_img" class="mx-auto min-h-screen grid items-center">
+
+
+
+        <!-- 1st page content -->
+        <div id="first" class="pb-20 px-2">
+            <h1 class="text-3xl md:text-5xl lg:text-6xl font-semibold" id="anton">ALPHABET CLASH</h1>
+            <h4 class="mt-5 mb-7 text-sm md:text-base lg:text-[18px]" id="inter">Unleash Your Keyboard Kung Fu : Press
+                “Enter” to Play</h4>
+            <button class="btn glass bg-red-400" id="poppins" onclick="change_page('first', 'second')">Play Now</button>
+        </div>
+
+
+
+        <!-- 2th page content -->
+        <div id="second" class="hidden">
+
+            <!-- monitor board -->
+            <section
+                class="md:w-5/6 lg:w-3/5 h-72 mx-3 md:mx-auto border-[14px] border-gray-800 rounded-md bg-[#FFFFFFA1] text-5xl font-bold text-black">
+
+                <div class="w-fit mx-auto text-sm px-2 pb-2 bg-gray-800 text-white rounded-b-lg">
+                    Don't watch keyboard while playing...</div>
+
+                <h6 id="show_key" class="h-full grid items-center justify-center">F</h6>
+
+            </section>
+
+            <!-- keyboard -->
+            <section class="my-10 w-full">
+                <div class="flex w-full justify-center gap-1 mb-2">
+                    <kbd id="q" class="key">q</kbd>
+                    <kbd id="w" class="key">w</kbd>
+                    <kbd id="e" class="key">e</kbd>
+                    <kbd id="r" class="key">r</kbd>
+                    <kbd id="t" class="key">t</kbd>
+                    <kbd id="y" class="key">y</kbd>
+                    <kbd id="u" class="key">u</kbd>
+                    <kbd id="i" class="key">i</kbd>
+                    <kbd id="o" class="key">o</kbd>
+                    <kbd id="p" class="key">p</kbd>
+                </div>
+                <div class="flex w-full justify-center gap-1 mb-2">
+                    <kbd id="a" class="key">a</kbd>
+                    <kbd id="s" class="key">s</kbd>
+                    <kbd id="d" class="key">d</kbd>
+                    <kbd id="f" class="key">f</kbd>
+                    <kbd id="g" class="key">g</kbd>
+                    <kbd id="h" class="key">h</kbd>
+                    <kbd id="j" class="key">j</kbd>
+                    <kbd id="k" class="key">k</kbd>
+                    <kbd id="l" class="key">l</kbd>
+                </div>
+                <div class="flex w-full justify-center gap-1 mb-2">
+                    <kbd id="z" class="key">z</kbd>
+                    <kbd id="x" class="key">x</kbd>
+                    <kbd id="c" class="key">c</kbd>
+                    <kbd id="v" class="key">v</kbd>
+                    <kbd id="b" class="key">b</kbd>
+                    <kbd id="n" class="key">n</kbd>
+                    <kbd id="m" class="key">m</kbd>
+                </div>
+            </section>
+
+            <!-- life score btn -->
+            <section class="flex justify-around">
+                <div class="inline-flex rounded-full text-white bg-[#894189] p-2 px-7 glass">Life
+                    <img src="img/Group 23.svg" alt="life" class="mx-2">
+                    <span id="life">10</span>
+                </div>
+                <div class="inline-flex rounded-full text-white bg-[#360490]  p-2 px-7 glass">Score
+                    <img src="img/monetization_on.svg" alt="score" class="mx-2">
+                    <span id="score">0</span>
+                </div>
+            </section>
+
+            <!-- end game btn -->
+            <div class="inline-flex rounded-full text-white bg-[#e43267]  p-2 px-7 btn glass hover:bg-[#d05177] mt-5"
+                onclick="change_page('second', 'third')">End Game
+            </div>
+
+        </div>
+
+
+
+        <!-- 3th page content -->
+        <div id="third" class="hidden">
+            <section
+                class="min-h-56 w-4/6 md:w-2/5 lg:w-1/6 bg-gray-300 mx-auto bg-gradient-to-r from-[#b879b3] to-[#6e2dc3] rounded-lg glass pt-5 pb-1">
+                <h1 class="text-4xl font-bold" id="poppins">Score : <span id="finalResult">10</span></h1>
+
+                <button class="block mx-auto btn glass bg-blue-500 my-4 hover:bg-purple-400"
+                    onclick="change_page('third', 'second')">Play Again</button>
+
+                <button class="block mx-auto btn glass bg-green-500 my-4 hover:bg-purple-400"
+                    onclick="change_page('third', 'first')">Exisit Game</button>
+
+                <span class="text-sm">Practice will make you Perfect</span>
+            </section>
+        </div>
+
+
+
+    </section>
+    <!-- js added -->
+    <script src="index.js"></script>
+</body>
+
+</html>

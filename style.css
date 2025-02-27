@@ -1,0 +1,43 @@
+
+/* google font */
+#poppins{
+    font-family: "Poppins", serif;
+}
+#anton{
+    font-family: "Anton", serif;
+}
+#inter{
+    font-family: "Inter", serif;
+}
+
+
+
+/* class */
+
+
+.key{
+    /* p-2 rounded-md bg-white text-black */
+    padding: 2px 10px;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+}
+
+#bg_img{
+    background-image: url("./img/background.png"); /* The image used */
+    background-position: center;
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: contain;
+}
+
+
+
+/* on small screens (mobile) */
+@media (max-width: 767px) {
+    
+    /* hidden img in mobile */
+    .bg_img {
+        /* background-image: none !important; */
+        background-size: cover;
+    }
+}
